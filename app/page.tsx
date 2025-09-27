@@ -335,7 +335,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <div>
                 <p className="font-medium">Suggested Base Rent:</p>
-                <p className="text-lg">${results.suggestedBaseRent}</p>
+                <p className="text-lg">{results.suggestedBaseRent}</p>
               </div>
               <div>
                 <p className="font-medium">Suggested Rent of Care:</p>
