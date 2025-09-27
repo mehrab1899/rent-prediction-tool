@@ -141,7 +141,7 @@ export default function HomePage() {
       });
 
       setShowModal(true);
-    } catch (err: any) {
+    } catch (err: unknown) {
       setErrorModal(err.message || "Failed to fetch prediction");
     } finally {
       setLoading(false);
