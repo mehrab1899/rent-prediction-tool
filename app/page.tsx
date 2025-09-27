@@ -142,7 +142,11 @@ export default function HomePage() {
 
       setShowModal(true);
     } catch (err: unknown) {
-      setErrorModal(err.message || "Failed to fetch prediction");
+      if (err instanceof Error) {
+        setErrorModal(err.message);
+      } else {
+        setErrorModal("Failed to fetch prediction");
+      }
     } finally {
       setLoading(false);
     }
